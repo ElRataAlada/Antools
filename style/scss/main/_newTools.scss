@@ -1,0 +1,156 @@
+<<<<<<< HEAD
+.newTools{
+    width: 100%;
+    display: flex;
+    margin-bottom: 200px;
+
+    justify-content: space-between;
+
+    .description{
+        max-width: 430px;
+        width:  100%;
+
+        min-height: 300px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .btn{
+            scale: 2;
+            
+            &._active{
+                transition: scale 1s cubic-bezier(1,2,.3,-0.42);
+                scale: 1;
+            }
+        }
+
+    }
+
+    .title{
+        font-size: 48px;
+        line-height: 62px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .text{
+        font-size: 18px;
+        line-height: 30px;
+        color: $white_gray;
+    }
+
+    .btn{
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .card_image{
+        width: 64px;
+        height: 64px;
+    }
+
+    .card{
+        opacity: 0;
+
+        transform: translateY(50%);
+        transition: opacity .5s ease, transform .3s ease;
+
+        &._active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.newCompanies_cards{
+    width: 50%;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .card{
+        width: 48%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+=======
+.newTools{
+    width: 100%;
+    display: flex;
+    margin-bottom: 200px;
+
+    justify-content: space-between;
+
+    .description{
+        max-width: 430px;
+        width:  100%;
+
+        min-height: 300px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .btn{
+            scale: 2;
+            
+            &._active{
+                transition: scale 1s cubic-bezier(1,2,.3,-0.42);
+                scale: 1;
+            }
+        }
+
+    }
+
+    .title{
+        font-size: 48px;
+        line-height: 62px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .text{
+        font-size: 18px;
+        line-height: 30px;
+        color: $white_gray;
+    }
+
+    .btn{
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .card_image{
+        width: 64px;
+        height: 64px;
+    }
+
+    .card{
+        opacity: 0;
+
+        transform: translateY(50%);
+        transition: opacity .5s ease, transform .3s ease;
+
+        &._active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.newCompanies_cards{
+    width: 50%;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .card{
+        width: 48%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+>>>>>>> 4220f7276909586968ae3cf2d2d6737117a9e765
+}

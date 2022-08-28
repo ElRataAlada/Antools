@@ -1,0 +1,152 @@
+<<<<<<< HEAD
+@import "arrow";
+
+.dropdown{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover{
+        .dropdown_inner{
+            transform: scale(1);
+        }
+
+        .arrow{
+            &::after,
+            &::before
+            {
+                top: 30%;
+                background-color: #fff;
+            }
+            
+            &::before{ transform: rotate(45deg) translateX(40%);}
+            &::after{transform: rotate(-45deg) translateX(-40%);}
+        }
+    }
+
+    .arrow{
+        margin-left: 10px;
+    }
+}
+
+.dropdown_inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    transform: scale(0);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all .3s ease;
+}
+
+.dropdown_content{
+    margin-top: 40px;
+    padding: 0 10px;
+
+    border-radius: 8px;
+}
+
+.dropdown_element{
+    display: block;
+    background-color: #143142;
+
+    color: $white_gray;
+
+    border-radius: inherit;
+    text-align: center;
+
+    padding: 10px;
+    margin: 5px 0;
+
+    transition: all .2s ease;
+
+    &:hover{
+        color: inherit;
+
+        background-color: #33393d;
+    }
+    
+    &:active{
+        background-color: #2d3235;
+    }
+=======
+@import "arrow";
+
+.dropdown{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover{
+        .dropdown_inner{
+            transform: scale(1);
+        }
+
+        .arrow{
+            &::after,
+            &::before
+            {
+                top: 30%;
+                background-color: #fff;
+            }
+            
+            &::before{ transform: rotate(45deg) translateX(40%);}
+            &::after{transform: rotate(-45deg) translateX(-40%);}
+        }
+    }
+
+    .arrow{
+        margin-left: 10px;
+    }
+}
+
+.dropdown_inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    transform: scale(0);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all .3s ease;
+}
+
+.dropdown_content{
+    margin-top: 40px;
+    padding: 0 10px;
+
+    border-radius: 8px;
+}
+
+.dropdown_element{
+    display: block;
+    background-color: #143142;
+
+    color: $white_gray;
+
+    border-radius: inherit;
+    text-align: center;
+
+    padding: 10px;
+    margin: 5px 0;
+
+    transition: all .2s ease;
+
+    &:hover{
+        color: inherit;
+
+        background-color: #33393d;
+    }
+    
+    &:active{
+        background-color: #2d3235;
+    }
+>>>>>>> 4220f7276909586968ae3cf2d2d6737117a9e765
+}

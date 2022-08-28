@@ -1,0 +1,52 @@
+.arrow{
+    position: relative;
+    z-index: 10000;
+
+    $width: 13px;
+    $height: 3px;
+
+    width: 20px;
+    height: 20px;
+    
+    &::after,
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        
+        top: 60%;
+        right: 15%;
+        
+        width: $width;
+        height: $height;
+        border-radius: $height;
+        
+        background-color: rgb(144, 144, 144);
+        
+        position: absolute;
+        z-index: inherit;
+
+        transition: all .3s ease;
+    }
+    
+    &::after{transform: rotate(45deg) translateX(-40%);}
+    
+    &::before {transform: rotate(-45deg) translateX(40%);}
+
+    &:hover,
+    &.active{
+        &::after,
+        &::before
+        { top: 30%; }
+        
+        &::before{ transform: rotate(45deg) translateX(40%);}
+        &::after{transform: rotate(-45deg) translateX(-40%);}
+    }
+    
+    // // на клик
+    // &:active{
+    //     &::after,
+    //     &::before
+    //     {top: 25%;}
+    // }
+}
