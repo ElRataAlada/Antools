@@ -548,8 +548,12 @@ body.fixed {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  opacity: 0;
   transform: translateX(-200%);
-  transition: transform 1s ease 4s;
+  transition: all 1s ease 4s;
+}
+.socials._active {
+  opacity: 1;
 }
 .socials .item {
   margin-right: 40px;
