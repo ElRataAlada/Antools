@@ -12,10 +12,6 @@ const indicators = document.querySelectorAll('.slider_indicator')
 const itemWidth = slider.clientWidth
 const movePosition = itemWidth
 
-items.forEach((item) => {
-    item.style.cssText = `min-width: ${itemWidth};`
-})
-
 moveSlider()
 
 next.addEventListener('click', (e) => {

@@ -376,7 +376,8 @@ body.fixed {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-top: 200px;
   width: 100vw;
   height: 100vh;
 }
@@ -385,9 +386,16 @@ body.fixed {
   color: #fff;
   padding: 20px 40px;
 }
+.popup.open .header__nav .dropdown:hover {
+  margin-bottom: 100px;
+}
 .popup.open .header__nav .dropdown .dropdown_inner {
-  left: 100%;
-  top: -90%;
+  left: 0;
+  top: 50%;
+}
+.popup.open .header__nav .dropdown .dropdown_inner .dropdown_element {
+  color: rgb(220, 220, 220);
+  background-color: rgb(34, 34, 34);
 }
 .popup.open .header__nav .arrow::before, .popup.open .header__nav .arrow::after {
   background-color: #fff;
@@ -623,7 +631,7 @@ body.fixed {
   justify-content: space-between;
   overflow: hidden;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .card:nth-child(3n+1) {
   transition: scale 0.5s ease, transform 0.3s ease;
@@ -797,13 +805,6 @@ body.fixed {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.newTools .description .btn {
-  scale: 2;
-}
-.newTools .description .btn._active {
-  transition: scale 1s cubic-bezier(1, 2, 0.3, -0.42);
-  scale: 1;
 }
 .newTools .title {
   font-size: 48px;
@@ -987,6 +988,7 @@ body.fixed {
   display: flex;
   justify-content: space-between;
   padding-left: 30px;
+  margin-left: 30px;
   min-width: 100%;
   scale: 0.5;
   transition: all 1.5s ease;
@@ -1210,6 +1212,15 @@ body.fixed {
     align-items: center;
     text-align: center;
   }
+  .slider .slider_controll {
+    display: none !important;
+  }
+  .slider .slider__wrapper {
+    margin: 0;
+  }
+  .slider .slider_item {
+    width: 100%;
+  }
 }
 @media (max-width: 870px) {
   .header__nav {
@@ -1249,9 +1260,6 @@ body.fixed {
     width: 45%;
     margin: 0;
     margin-top: 20px;
-  }
-  .slider_track {
-    padding: 0 50px;
   }
   .slider_item {
     flex-wrap: wrap;
