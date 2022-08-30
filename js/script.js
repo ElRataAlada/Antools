@@ -1,11 +1,33 @@
 const actions = document.querySelectorAll(".action_container")
 
+getActiosFromLocalStorage()
+
 actions.forEach((action) => {
     action.addEventListener('click', (e)=>{
         e.currentTarget.classList.toggle('active')
+        putActionsToLocalStorage()
     })
 })
 
+function putActionsToLocalStorage(){
+    let res = []
+    
+    actions.forEach((el) =>{
+        res.push(el.classList.contains('active'))
+    })
+
+    localStorage.setItem('active_actions', JSON.stringify(res))
+}
+
+function getActiosFromLocalStorage(){
+    let active = JSON.parse((localStorage.getItem('active_actions') || '[]'))
+
+    if (active.length != actions.length) {localStorage.removeItem('active_actions'); return;}
+
+    for (let i = 0; i < actions.length; i++){
+        if (active[i]) {actions[i].classList.add('active')}
+    }
+}
 
 const cards = document.querySelectorAll('#card')
 
@@ -65,5 +87,3 @@ nav.querySelectorAll('#link').forEach((link) => {
         popup.classList.toggle('open')
     })
 })
-
-
