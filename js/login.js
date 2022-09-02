@@ -56,7 +56,7 @@ function getUser(){
 function valideteForm(form){
     let errors = 0
     let formReq = form.querySelectorAll('._req')
-    
+
     for(let i = 0; i < formReq.length; i++){
         const input = formReq[i];
         formRemoveError(input);
@@ -70,13 +70,16 @@ function valideteForm(form){
 
         if(input.type == 'password'){
             if(users[user].password != input.value) {
+                infoText.textContent = 'Wrong password'
+                infoText.classList.add('error')
+                
                 errors++
                 formAddError(input)
             }
         }
-
-        return errors == 0
     }
+
+    return errors == 0
 }
 
 function formAddError(element){
