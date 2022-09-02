@@ -1,0 +1,62 @@
+@media (max-width: 991px){
+    .login__inner,
+    .signup__inner{
+        height: 500px;
+    }
+
+    
+    .left__inner{
+        .title{
+            font-size: 30px;
+        }
+
+        .text{
+            font-size: 18px;
+        }
+    }
+
+    input{
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 870px){
+    .login__left,
+    .signup__left{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
+@media (max-width: 670px){
+    .login__left,
+    .signup__left{
+        display: none;
+    }
+    
+    .login__right,
+    .signup__right{
+        width: 100%;
+    }
+}
+
+@media (max-width: 545px){
+    .login__right,
+    .signup__right{
+        padding: 30px 30px;
+    }
+    
+}
+
+@media (max-width: 400px){
+    input{
+        padding: 5px;
+        height: 30px;
+    }
+
+    .main{
+        padding-top: 50px;
+    }
+}

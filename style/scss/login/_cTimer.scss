@@ -1,0 +1,46 @@
+.circle_timer{
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+
+    margin: 0 auto;
+
+    &.active{
+        display: block;
+    }
+
+    &.finished{
+        .timer__circle_ring{
+            stroke-width: 10;
+            r: 40;
+            stroke: #89c868;
+        }
+    }
+}
+
+.timer__circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.timer__circle_ring{
+    stroke-dasharray: 50 10;
+    stroke-dashoffset: 0;
+
+    transition: stroke-dashoffset .1s linear, stroke-width 1s linear, stroke 1s linear, r 1s linear;
+}
+
+.timer_number{
+    position: absolute;
+
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

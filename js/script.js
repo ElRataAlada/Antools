@@ -1,5 +1,48 @@
-const actions = document.querySelectorAll(".action_container")
+const btns = document.querySelectorAll('.btn')
 
+let user = null;
+let users = [];
+
+getUsersFromLS()
+
+function getUsersFromLS(){
+    users = JSON.parse(localStorage.getItem('users')) || []
+}
+
+function getUser(){
+    for(let i = 0; i < users.length; i++){
+        if(users[i].loggined){
+            user = i;
+            return true;
+        }
+    }
+}
+
+checkUser()
+
+function checkUser(){    
+    getUser()
+
+    if(user != null) {
+        if(users[user].loggined){
+            const username = document.querySelector('.user')
+            username.textContent = users[user].username
+
+            btns[0].textContent = 'Log Out';
+            btns[1].style.display = 'none';
+            btns[0].addEventListener('click', (e) => {
+                e.preventDefault()
+
+                users[user].loggined = false
+                localStorage.setItem('users', JSON.stringify(users))
+
+                window.location.href = 'index.html'
+            })
+        }
+    }
+}
+
+const actions = document.querySelectorAll(".action_container")
 getActiosFromLocalStorage()
 
 actions.forEach((action) => {

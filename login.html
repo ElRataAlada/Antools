@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="style/css/login.min.css">
+
+    <script src="js/login.js" defer></script>
+    <script src="js/cTimer.js" defer></script>
+    
+    <title>Login</title>
+</head>
+<body>
+
+<div class="layer">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header_logo">
+                <img src="img/svg/logo.svg" alt="Logo" class="logo_img">
+                <div class="logo_text">antools.</div>
+            </a>
+            
+            <a href="signup.html" class="btn">Sign Up</a>
+
+            <!-- <div class="burger"> -->
+                <!-- <span class="burger_element"></span> -->
+            <!-- </div> -->
+    
+            <!-- <div class="popup"></div> -->
+        </div>
+    </header>
+    
+
+<div class="main">
+<div class="login">
+    <div class="container">
+        <div class="login__inner">
+                <div class="login__left">
+                    <div class="left__inner">
+                        <img src="./img/svg/logo.svg" alt="logo" class="logo">
+                        <div class="title">Antools<span>.</span></div>
+                        <div class="text"><p>Awesome tools for Designer & Developer</p></div>
+                    </div>
+                </div>
+                
+                <div class="login__right">
+                    <div class="right__inner">
+                        <div class="main_title">Log in</div>
+    
+                        <form action="#" id="form" name="login">
+                            <div class="email">
+                                <div class="title">Email</div>
+                                <input class="_req" type="email" name="email" id="email" placeholder="Your email">
+                            </div>
+    
+                            <div class="password">
+                                <div class="title">Password</div>
+                                <input class="_req" type="password" name="password" id="password" placeholder="Enter your password">
+                            </div>
+
+                            <div class="circle_timer" data-time="2">
+                                <svg class="timer__circle" width="170" height="170">
+                                    <!-- cx, cy = w/2 -->
+                                    <!-- r = cx - sw*2 -->
+                                    <circle class="timer__circle_ring" stroke="white" stroke-width="30" cx="85" cy="85" r="55" fill="transparent">
+                                </svg>
+                            
+                                <div class="timer_number">0</div>
+                            </div>
+
+                            <div class="info_text"></div>
+
+                            <button class="btn--login" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="first_footer">
+                <a href="#" class="footer_logo">
+                    <img src="img/svg/logo.svg" alt="Logo" class="logo_img">
+                    <div class="logo_text">antools.</div>
+                </a>
+                <div class="title">Copyright 2021. Antools</div>
+                <div class="text"><p>Antool is a web collection of information on paid or free Design and Development tools</p></div>
+            </div>
+            <div class="last_footer">
+                <div class="item">
+                    <div class="title">Contact Us</div>
+                    <address class="text">
+                        <p>+621987463</p>
+                        <p>M Building, No.10 A</p>
+                        <p>antools@awesome.com</p>
+                    </address>
+                </div>
+            
+                <div class="item">
+                    <div class="title">Categories</div>
+                    <div class="text">
+                        <p>Design</p>
+                        <p>Development</p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="title">Company Info</div>
+                    <div class="text">
+                        <p>About Us</p>
+                        <p>Our Partners</p>
+                        <p>Blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+</div>
+
+
+</body>
+</html>
