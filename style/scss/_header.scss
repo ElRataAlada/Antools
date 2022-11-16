@@ -156,7 +156,7 @@ $header_background: inherit;
         opacity: 1;
         right: 0;
 
-        padding: 100px;
+        padding: 100px 0;
 
         .header__nav{
             z-index: inherit;
@@ -202,6 +202,7 @@ $header_background: inherit;
         .btns{
             z-index: inherit;
             display: block;
+            width: fit-content;
             padding: 0;
             margin-bottom: 50px;
         }
