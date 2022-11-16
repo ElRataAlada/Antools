@@ -134,6 +134,10 @@ $header_background: inherit;
 
 .popup{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     top: 0;
     right: -100%;
@@ -152,6 +156,8 @@ $header_background: inherit;
         opacity: 1;
         right: 0;
 
+        padding: 100px;
+
         .header__nav{
             z-index: inherit;
     
@@ -159,9 +165,6 @@ $header_background: inherit;
             flex-direction: column;
             justify-content: space-around;
 
-            padding-bottom: 100px;
-            padding-top: 200px;
-    
             width: 100vw;
             height: 100vh;
 
@@ -194,6 +197,13 @@ $header_background: inherit;
                     background-color: #fff;
                 }
             }
+        }
+
+        .btns{
+            z-index: inherit;
+            display: block;
+            padding: 0;
+            margin-bottom: 50px;
         }
     }
 

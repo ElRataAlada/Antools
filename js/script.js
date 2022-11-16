@@ -28,7 +28,7 @@ function checkUser(){
             const username = document.querySelector('.user')
             username.textContent = users[user].username
 
-            btns[0].textContent = 'Log Out';
+            btns[0].style.display = 'none';
             btns[1].style.display = 'none';
             btns[0].addEventListener('click', (e) => {
                 e.preventDefault()
@@ -43,7 +43,7 @@ function checkUser(){
 }
 
 const actions = document.querySelectorAll(".action_container")
-getActiosFromLocalStorage()
+getActionsFromLocalStorage()
 
 actions.forEach((action) => {
     action.addEventListener('click', (e)=>{
@@ -62,7 +62,7 @@ function putActionsToLocalStorage(){
     localStorage.setItem('active_actions', JSON.stringify(res))
 }
 
-function getActiosFromLocalStorage(){
+function getActionsFromLocalStorage(){
     let active = JSON.parse((localStorage.getItem('active_actions') || '[]'))
 
     if (active.length != actions.length) {localStorage.removeItem('active_actions'); return;}
@@ -113,9 +113,11 @@ function getOffset(item){
 const burger = document.querySelector('.burger')
 const popup= document.querySelector('.popup')
 const nav = document.querySelector('.header__nav').cloneNode(1)
+const login_btns = document.querySelector('.btns').cloneNode(1)
 
 burger.addEventListener('click', (e)=>{
     burger.classList.toggle('active')
+    popup.appendChild(login_btns)
     popup.appendChild(nav)
     document.body.classList.toggle('fixed')
     popup.classList.toggle('open')
@@ -125,6 +127,7 @@ nav.querySelectorAll('#link').forEach((link) => {
     link.addEventListener('click', (e)=>{
         e.preventDefault()
         burger.classList.toggle('active')
+        popup.removeChild(login_btns)
         popup.removeChild(nav)
         document.body.classList.toggle('fixed')
         popup.classList.toggle('open')

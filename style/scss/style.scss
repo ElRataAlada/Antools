@@ -111,6 +111,12 @@ body{
     }
 }
 
+.user{
+    user-select: none;
+    font-size: 20px;
+    color: rgb(255, 135, 22);
+}
+
 ._active{
     transform: translate(0, 0) !important;
 }

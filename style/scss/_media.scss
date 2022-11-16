@@ -68,6 +68,7 @@
     }   
 
     .btns{
+        display: none;
         padding-right: 150px;
     }
 
@@ -309,6 +310,10 @@
     }
 
     .slider{
+        display: none;
+    }
+
+    .user{
         display: none;
     }
 }
