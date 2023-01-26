@@ -25,12 +25,13 @@ function sendForm(e){
         form.querySelector('.password').style.display = 'none';
         infoText.textContent = 'You dont have an account'
         infoText.classList.add('error')
-       
-        document.querySelector('.circle_timer').classList.add('active');
 
-        setTimeout(()=>{
+        document.querySelector('.btn--signup').classList.remove('hiden');
+        document.querySelector('.btn--login').classList.add('hiden');
+
+        document.querySelector('.btn--signup').addEventListener('click', () => {
             window.location.href = 'signup.html'
-        }, document.querySelector('.circle_timer').dataset.time * 1000 + 1000)
+        })
     }
     else if (valideteForm(form)) {loginUser()}
 }

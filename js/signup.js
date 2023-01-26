@@ -31,7 +31,6 @@ function putUsertoLS(){
     form.querySelector('.username').style.display = 'none';
     form.querySelector('.email').style.display = 'none';
     form.querySelector('.password').style.display = 'none';
-    document.querySelector('.circle_timer').classList.add('active');
     
     infoText.textContent = 'You have successfully created an account'
     infoText.classList.add('sucsess')
@@ -40,7 +39,7 @@ function putUsertoLS(){
 
     setTimeout(()=>{
         window.location.href = 'login.html'
-    }, document.querySelector('.circle_timer').dataset.time * 1000 + 1000)
+    }, 1000)
 }
 
 function checkCreated(form){
@@ -53,7 +52,6 @@ function checkCreated(form){
             form.querySelector('.username').style.display = 'none';
             form.querySelector('.email').style.display = 'none';
             form.querySelector('.password').style.display = 'none';
-            document.querySelector('.circle_timer').classList.add('active');
 
             infoText.textContent = 'You already have an account.'
             infoText.classList.add('error')

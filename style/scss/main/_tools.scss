@@ -81,12 +81,12 @@
     }
     
     &:nth-child(3n+2){
-        transition: scale .5s ease .5s, transform .3s ease;
+        transition: scale .5s ease, transform .3s ease;
         scale: 0;
     }
     
     &:nth-child(3n+3){
-        transition: scale .5s ease 1s, transform .3s ease;
+        transition: scale .5s ease, transform .3s ease;
         scale: 0;
     }
     
